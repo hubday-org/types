@@ -28,17 +28,6 @@ export interface Role {
     permissions?: Permission[]
 }
 
-institutions: {
-	iut: {
-		cas: "https://cas.u-bordeaux.fr",
-		domain: "u-bordeaux.fr"
-	},
-	enseirb: {
-		cas: "https://cas.bordeaux-inp.fr",
-		domain: "enseirb-matmeca.fr"
-	}
-}
-
 interface InstitutionServiceURL {
     service: string;
     cas: string;
