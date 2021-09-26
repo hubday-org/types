@@ -28,6 +28,11 @@ export interface Role {
     permissions?: Permission[]
 }
 
+export interface InstitutionsURLs {
+    iut: string;
+    enseirb: string;
+}
+
 export interface Institution {
     id: string;
     name: string;
