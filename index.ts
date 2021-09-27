@@ -28,15 +28,13 @@ export interface Role {
     permissions?: Permission[]
 }
 
-interface InstitutionServiceURL {
+interface InstitutionAuthURLs {
     service: string;
     cas: string;
-    domain: string;
 }
 
-export interface InstitutionsURLs {
-    iut: InstitutionServiceURL;
-    enseirb: InstitutionServiceURL;
+export interface InstitutionsAuthURLs {
+    [key: string]: InstitutionAuthURLs;
 }
 
 export interface Institution {
