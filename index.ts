@@ -1,3 +1,5 @@
+import * as netlify from '@netlify/functions/src/function/response';
+
 export interface Permission {
 	id: string;
 	name: string;
@@ -68,6 +70,6 @@ export interface HubdayResponse<T> {
 	data: T;
 }
 
-export interface NetlifyHubdayResponse extends Omit<Response, 'body'> {
+export interface NetlifyHubdayResponse extends Omit<netlify.Response, 'body'> {
 	body: HubdayResponse<undefined>;
 }
