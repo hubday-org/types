@@ -1,62 +1,69 @@
 export interface Permission {
-    id: string;
-    name: string;
+	id: string;
+	name: string;
 }
 
 export interface RoleType {
-    id: string;
-    name: string;
-    description: string;
+	id: string;
+	name: string;
+	description: string;
 }
 
 export interface Role {
-    id: string;
-    type: RoleType;
-    displayName: string;
-    shortName?: string;
-    specificTo?: string;
-    suffix?: string;
+	id: string;
+	type: RoleType;
+	displayName: string;
+	shortName?: string;
+	specificTo?: string;
+	suffix?: string;
 
-    color?: string;
-    icon?: string;
-    displayOnLogin: boolean;
+	color?: string;
+	icon?: string;
+	displayOnLogin: boolean;
 
-    hoist: boolean;
-    discordId?: string;
-    position?: number;
+	hoist: boolean;
+	discordId?: string;
+	position?: number;
 
-    permissions?: Permission[]
+	permissions?: Permission[]
 }
 
 interface InstitutionAuthURLs {
-    service: string;
-    cas: string;
+	service: string;
+	cas: string;
 }
 
 export interface InstitutionsAuthURLs {
-    [key: string]: InstitutionAuthURLs;
+	[key: string]: InstitutionAuthURLs;
 }
 
 export interface Institution {
-    id: string;
-    name: string;
-    authorizedDomains: string[];
-    casServer?: string;
+	id: string;
+	name: string;
+	authorizedDomains: string[];
+	casServer?: string;
 }
 
 export interface User {
-    username: string;
-    email: string;
-    photoURL?: string;
-    personalEmail?: string;
-    displayName: string;
-    firstName: string;
-    lastName: string;
-    customDisplayName?: string;
-    gender?: string;
-    groups?: Role[] | string[],
-    options?: Role[] | string[],
-    roles?: Role[] | string[],
-    permissions?: Role[] | string[],
-    discordId?: string;
+	username: string;
+	email: string;
+	photoURL?: string;
+	personalEmail?: string;
+	displayName: string;
+	firstName: string;
+	lastName: string;
+	customDisplayName?: string;
+	gender?: string;
+	groups?: Role[] | string[],
+	options?: Role[] | string[],
+	roles?: Role[] | string[],
+	permissions?: Role[] | string[],
+	discordId?: string;
+}
+
+export interface HubdayResponse<T> {
+	status: "ok" | "error";
+	code: number;
+	message: string;
+	data: T;
 }
