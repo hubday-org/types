@@ -71,5 +71,5 @@ export interface HubdayResponse<T> {
 }
 
 export interface NetlifyHubdayResponse extends Omit<netlify.Response, 'body'> {
-	body: HubdayResponse<unknown>;
+	body: HubdayResponse<unknown> | null;
 }
