@@ -67,3 +67,7 @@ export interface HubdayResponse<T> {
 	message: string;
 	data: T;
 }
+
+export interface NetlifyHubdayResponse extends Omit<Response, 'body'> {
+	body: HubdayResponse<undefined>;
+}
