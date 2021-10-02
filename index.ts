@@ -65,7 +65,7 @@ export interface User {
 
 export interface HubdayResponse<T> {
 	status: "ok" | "error";
-	code: number;
+	code: string;
 	message: string;
 	data: T;
 }
