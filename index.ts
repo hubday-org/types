@@ -5,11 +5,7 @@ export interface Permission {
 	name: string;
 }
 
-export interface RoleType {
-	id: string;
-	name: string;
-	description: string;
-}
+export type RoleType = 'groupS2' | 'groupS1' | 'groupYear' | 'roleYear' | 'roleS1' | 'roleS2' | 'subgroupS1' | 'subgroupS2' | 'optionS4' | 'optionS3' | 'optionS2' | 'optionS1';
 
 export interface Role {
 	id: string;
