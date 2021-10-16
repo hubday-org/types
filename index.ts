@@ -36,27 +36,33 @@ export interface InstitutionsAuthURLs {
 }
 
 export interface Institution {
-	id: string;
-	name: string;
-	authorizedDomains: string[];
-	casServer?: string;
+    id: string;
+    name: string;
+    photoURL?: string;
+    bannerURL?: string;
+    description?: string;
+    discordId?: string;
+    casServerUrl?: string;
+    serviceUrl?: string;
 }
 
 export interface User {
-	username: string;
-	email: string;
-	photoURL?: string;
-	personalEmail?: string;
-	displayName: string;
-	firstName: string;
-	lastName: string;
-	customDisplayName?: string;
-	gender?: string;
-	groups?: Role[] | string[],
-	options?: Role[] | string[],
-	roles?: Role[] | string[],
-	permissions?: Role[] | string[],
-	discordId?: string;
+    username: string;
+    email: string;
+    photoURL?: string;
+    personalEmail?: string;
+    displayName: string;
+    firstName: string;
+    lastName: string;
+    customDisplayName?: string;
+    gender?: string;
+
+    groups?: { [key: string]: boolean },
+    options?: { [key: string]: boolean },
+    roles?: { [key: string]: boolean },
+
+    discordId?: string;
+    planningId?: string;
 }
 
 export interface HubdayResponse<T> {
